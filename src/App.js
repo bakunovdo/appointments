@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route} from "react-router-dom";
+import {HashRouter, Route} from "react-router-dom";
 import styled from "styled-components"
 
 import AppBar from "@material-ui/core/AppBar";
@@ -25,7 +25,7 @@ const SContentApp = styled.div`
 
 export function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <SApp>
                 <AppBar position="static">
                     <HeaderContainer/>
@@ -36,6 +36,6 @@ export function App() {
                     <Route exact path="/makeAppointment" component={NewAppointmentsForm}/>
                 </SContentApp>
             </SApp>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
